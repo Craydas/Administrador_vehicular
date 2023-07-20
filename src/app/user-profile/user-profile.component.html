@@ -1,0 +1,103 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Vehiculo</h4>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="row">
+                              <div class="col-md-2">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Placa">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{tipoV2}}
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" (click)="liviano()">Liviano</a>
+                                    <a class="dropdown-item" (click)="pesado()">Maquinaria pesada</a>
+                                    <a class="dropdown-item" (click)="motor()">Motorizados</a>
+                                    <a class="dropdown-item" (click)="carga()">Vehiculo de carga</a>
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="col-md-2">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Kilometraje">
+                              </mat-form-field>
+                           </div>
+                           <div class="col-md-2">
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Marca">
+                            </mat-form-field>
+                            </div>
+                            <div class="col-md-2">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Modelo">
+                              </mat-form-field>
+                           </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-2">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Color" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-2">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Motor" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{combustible}}
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" (click)="extra()">Extra</a>
+                                    <a class="dropdown-item" (click)="super()">Super</a>
+                                    <a class="dropdown-item" (click)="diesel()">Diesel</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Chasis" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Carroceria" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-2">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Aceite" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Responsable
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" *ngFor="let chofer of choferes" (click)= "removeIdD(dep)">{{chofer.nombre}} {{chofer.apellido}}</a>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Guardar</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

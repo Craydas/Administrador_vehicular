@@ -1,0 +1,20 @@
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+      </form>
+      <form class="login-form">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{licencia}}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="C1()">LICENCIA TIPO "C1"</a>
+            <a class="dropdown-item" (click)="E()">LICENCIA TIPO "E"</a>
+            <a class="dropdown-item" (click)="G()">LICENCIA TIPO "G"</a>
+          </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-danger" (click)="licencias()">Guardar</button>
+      </form>
+    </div>
+  </div>

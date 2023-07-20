@@ -1,0 +1,53 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Vehiculos</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="height: 400px; overflow: auto;">
+                          
+                            <table class="table">
+                                <thead class=" text-secundary">
+                                  <tr>
+                                      <th>Placa</th>
+                                      <th>Tipo</th>
+                                      <th>Kilometraje</th>
+                                      <th>Marca</th>
+                                      <th>Modelo</th>
+                                      <th>Color</th>
+                                      <th>Motor</th>
+                                      <th>Combustible</th>
+                                      <th>Chasis</th>
+                                      <th>Carroceria</th>
+                                      <th>Aceite</th>
+                                      <th>Responsable</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let vehiculo of vehiculos; let i=index" (click)= "obtener_id(vehiculo.id_vehiculo)" [ngClass]="{seleccionar: selectedRow === vehiculo.id_vehiculo}">
+                                      <td>{{vehiculo.placa}}</td>
+                                      <td>{{vehiculo.tipo}}</td>
+                                      <td>{{vehiculo.kilometraje}}</td>
+                                      <td>{{vehiculo.marca}}</td>
+                                      <td>{{vehiculo.modelo}}</td>
+                                      <td>{{vehiculo.color}}</td>
+                                      <td>{{vehiculo.motor}}</td>
+                                      <td>{{vehiculo.combustible}}</td>
+                                      <td>{{vehiculo.chasis}}</td>
+                                      <td>{{vehiculo.carroceria}}</td>
+                                      <td>{{vehiculo.aceite}}</td>
+                                      <td>{{vehiculo.nombre}} {{vehiculo.apellido}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container"><button class="derecha"  type="button" class="btn btn-danger" (click)="crear()">Nuevo Vehiculo</button><button class="derecha"  type="button" class="btn btn-danger" (click)="actualizar()">Actualizar Vehiculo</button></div>
+            </div>
+        </div>
+    </div>
+  </div>

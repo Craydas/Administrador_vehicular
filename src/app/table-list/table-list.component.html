@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Choferes</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive" style="height: 400px; overflow: auto;">
+                        
+                          <table class="table">
+                              <thead class=" text-secundary">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Cedula</th>
+                                    <th>Licencia</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let chofer of choferes; let i=index" (click)= "obtener_id(chofer.id_empleado)" [ngClass]="{seleccionar: selectedRow === chofer.id_empleado}">
+                                    <td>{{chofer.nombre}}</td>
+                                    <td>{{chofer.apellido}}</td>
+                                    <td>{{chofer.cedula}}</td>
+                                    <td *ngIf="chofer.licencia==null">No posee licenica</td>
+                                    <td *ngIf="chofer.licencia!=null">{{chofer.licencia}}</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="container"><button class="derecha" (click)="licencias()" type="button" class="btn btn-danger">Asignar Licencias</button></div>
+          </div>
+      </div>
+  </div>
+</div>

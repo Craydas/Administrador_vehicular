@@ -1,0 +1,22 @@
+.seleccionar{
+    background-color: rgb(194, 194, 194);
+}
+.derecha{
+    float: right;
+    position: relative;
+}
+.left{
+    float: left;
+    position: relative;
+}
+section{
+    position: relative;
+    width: 50%;
+    border: 1px solid;
+}
+.titulo{
+    display: inline;
+}
+.boton{
+    float: right;
+}
